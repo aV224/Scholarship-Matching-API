@@ -1,0 +1,76 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+// Data Source & Generator. It tells Prisma to generate the Prisma Client, which is a TS/JS library 
+// that lets you query your database in a type-safe way
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+
+// "@" annotations in Prisma schemas are directives that add special behavior to fields
+// They tell Prisma how to treat each field when generating the db and client
+
+// Student DB
+model Student {
+  // id is the unique identifier for each Student, and it will be auto-generated.
+  // @id marks this field as the primary key, @default sets a default value for the field when a new record is created 
+  id                      String   @id @default(uuid())
+  email                   String   @unique    // @unique ensures the field is unique across all records - no duplicates
+  name                    String
+  gpa                     Float
+  enrollment_status       String
+  major                   String
+  graduation_year         Int
+  gender                  String?    // ? means the field is optional (nullable).. String means the field is required, value must be provided.. ? means it can take a null
+  ethnicity               String[]
+  citizenship_status      String
+  household_income        Int
+  financial_need          Boolean  @default(false)
+  first_generation        Boolean  @default(false)
+  military_affiliation    String?
+  residency               String?
+  community_service_hours Int      @default(0)
+  state                   String
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt    // @updatedAt automatically updates the field to the currrent timestamp whenever the record is modified
+
+  @@index([gpa])   // Performance: We will query by GPA frequently
+  @@index([major]) // Performance: We will query by Major frequently
+}
+
+// Scholarship DB
+model Scholarship {
+  id                       String   @id @default(uuid())
+  name                     String
+  provider                 String
+  amount                   Int
+  amount_type              String   
+  deadline                 DateTime
+  eligibility              Json     
+  fields_of_study          String[] 
+  description              String
+  application_requirements String[]
+  renewable                Boolean  @default(false)
+  renewable_conditions     String?
+  url                      String
+  tags                     String[]
+  createdAt                DateTime @default(now())
+
+  
+  // Indexing the amount allows the "Total Potential Aid" calculations 
+  // and "Sort by Amount" queries to be optimized and efficient.
+  @@index([amount])
+
+  // Indexing the deadline is critical because students usually 
+  // want to see scholarships that are closing soon first.
+  @@index([deadline])
+}
