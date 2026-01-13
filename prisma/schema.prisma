@@ -23,7 +23,7 @@ datasource db {
 model Student {
   // id is the unique identifier for each Student, and it will be auto-generated.
   // @id marks this field as the primary key, @default sets a default value for the field when a new record is created 
-  id                      String   @id @default(uuid())
+  id                      String   @id
   email                   String   @unique    // @unique ensures the field is unique across all records - no duplicates
   name                    String
   gpa                     Float
@@ -49,7 +49,7 @@ model Student {
 
 // Scholarship DB
 model Scholarship {
-  id                       String   @id @default(uuid())
+  id                       String   @id
   name                     String
   provider                 String
   amount                   Int
