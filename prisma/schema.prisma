@@ -9,6 +9,7 @@
 generator client {
   provider = "prisma-client"
   output   = "../generated/prisma"
+  previewFeatures = ["postgresqlExtensions", "extendedIndexes"]
 }
 
 datasource db {
@@ -55,8 +56,18 @@ model Scholarship {
   amount                   Int
   amount_type              String   
   deadline                 DateTime
-  eligibility              Json     
-  fields_of_study          String[] 
+  fields_of_study          String[]
+
+  // Refactored Core Eligibility Fields -- I'm moving them out here so we can use standard B-Tree indexes
+  min_gpa                  Float    @default(0)
+  requires_financial_need  Boolean  @default(false)
+  citizenship              String[]
+  enrollment_status        String[]
+
+  // Extra eligibility fields that are not indexed upon often
+  // Keep the JSON for things like "residency: rural" or "military_affiliation"
+  extra_eligibility        Json?
+   
   description              String
   application_requirements String[]
   renewable                Boolean  @default(false)
@@ -66,11 +77,11 @@ model Scholarship {
   createdAt                DateTime @default(now())
 
   
-  // Indexing the amount allows the "Total Potential Aid" calculations 
-  // and "Sort by Amount" queries to be optimized and efficient.
-  @@index([amount])
+  // Indexes for quickly searching eligible scholarships for a particular student
+  @@index([min_gpa])
+  @@index([requires_financial_need])
 
-  // Indexing the deadline is critical because students usually 
-  // want to see scholarships that are closing soon first.
-  @@index([deadline])
+  // GIN Indexes (Fast search within Arrays)
+  @@index([citizenship], type: Gin)
+  @@index([enrollment_status], type: Gin)
 }
