@@ -7,9 +7,9 @@
 // Data Source & Generator. It tells Prisma to generate the Prisma Client, which is a TS/JS library 
 // that lets you query your database in a type-safe way
 generator client {
-  provider = "prisma-client"
-  output   = "../generated/prisma"
-  previewFeatures = ["postgresqlExtensions", "extendedIndexes"]
+  provider = "prisma-client-js"
+  //output   = "../generated/prisma"
+  //previewFeatures = ["postgresqlExtensions", "extendedIndexes"]
 }
 
 datasource db {

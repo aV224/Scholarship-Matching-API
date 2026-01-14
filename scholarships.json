@@ -1,0 +1,326 @@
+{
+  "scholarships": [
+    {
+      "id": "sch_001",
+      "name": "First Generation College Student Award",
+      "provider": "National Education Foundation",
+      "amount": 5000,
+      "amount_type": "fixed",
+      "deadline": "2025-03-15",
+      "eligibility": {
+        "gpa_minimum": 2.5,
+        "first_generation": true,
+        "citizenship": ["US Citizen", "Permanent Resident"],
+        "enrollment_status": ["high_school_senior", "undergraduate"],
+        "financial_need": true
+      },
+      "fields_of_study": [],
+      "description": "Supporting first-generation college students in achieving their educational dreams. Open to all majors.",
+      "application_requirements": [
+        "Personal essay (500 words)",
+        "Two letters of recommendation",
+        "Official transcript",
+        "FAFSA submission"
+      ],
+      "renewable": true,
+      "renewable_conditions": "Maintain 2.5 GPA",
+      "url": "https://example.org/first-gen-award",
+      "tags": ["first-generation", "need-based", "undergraduate"]
+    },
+    {
+      "id": "sch_002",
+      "name": "Women in STEM Excellence Scholarship",
+      "provider": "TechForward Alliance",
+      "amount": 10000,
+      "amount_type": "fixed",
+      "deadline": "2025-04-01",
+      "eligibility": {
+        "gpa_minimum": 3.2,
+        "gender": "female",
+        "citizenship": ["US Citizen", "Permanent Resident", "DACA"],
+        "enrollment_status": ["undergraduate", "graduate"],
+        "financial_need": false
+      },
+      "fields_of_study": ["Computer Science", "Engineering", "Mathematics", "Physics", "Data Science"],
+      "description": "Empowering women pursuing degrees in science, technology, engineering, and mathematics fields.",
+      "application_requirements": [
+        "Personal statement on career goals (750 words)",
+        "Resume or CV",
+        "Faculty recommendation",
+        "Official transcript"
+      ],
+      "renewable": true,
+      "renewable_conditions": "Maintain 3.0 GPA and STEM major",
+      "url": "https://example.org/women-stem",
+      "tags": ["women", "STEM", "merit-based"]
+    },
+    {
+      "id": "sch_003",
+      "name": "Community Leadership Grant",
+      "provider": "Citizens for Tomorrow",
+      "amount": 2500,
+      "amount_type": "fixed",
+      "deadline": "2025-02-28",
+      "eligibility": {
+        "gpa_minimum": 2.0,
+        "citizenship": ["US Citizen", "Permanent Resident", "DACA", "International"],
+        "enrollment_status": ["high_school_senior"],
+        "financial_need": false,
+        "community_service_hours": 100
+      },
+      "fields_of_study": [],
+      "description": "Recognizing high school seniors who have demonstrated exceptional commitment to community service and leadership.",
+      "application_requirements": [
+        "Documentation of community service",
+        "Essay on leadership experience (400 words)",
+        "Community leader recommendation"
+      ],
+      "renewable": false,
+      "renewable_conditions": null,
+      "url": "https://example.org/community-leadership",
+      "tags": ["community-service", "leadership", "high-school"]
+    },
+    {
+      "id": "sch_004",
+      "name": "Future Educators Scholarship",
+      "provider": "American Teachers Association",
+      "amount": 7500,
+      "amount_type": "fixed",
+      "deadline": "2025-05-01",
+      "eligibility": {
+        "gpa_minimum": 3.0,
+        "citizenship": ["US Citizen", "Permanent Resident"],
+        "enrollment_status": ["undergraduate", "graduate"],
+        "financial_need": false
+      },
+      "fields_of_study": ["Education", "Early Childhood Education", "Special Education", "Secondary Education"],
+      "description": "Supporting aspiring teachers committed to careers in K-12 education, with preference for those planning to teach in underserved communities.",
+      "application_requirements": [
+        "Statement of purpose",
+        "Two academic references",
+        "Transcript",
+        "Commitment letter for teaching service"
+      ],
+      "renewable": true,
+      "renewable_conditions": "Maintain 3.0 GPA and education major",
+      "url": "https://example.org/future-educators",
+      "tags": ["education", "teaching", "career-specific"]
+    },
+    {
+      "id": "sch_005",
+      "name": "Overcoming Adversity Award",
+      "provider": "Resilience Foundation",
+      "amount": 3000,
+      "amount_type": "fixed",
+      "deadline": "2025-03-31",
+      "eligibility": {
+        "gpa_minimum": 2.0,
+        "citizenship": ["US Citizen", "Permanent Resident", "DACA"],
+        "enrollment_status": ["high_school_senior", "undergraduate"],
+        "financial_need": true
+      },
+      "fields_of_study": [],
+      "description": "For students who have overcome significant personal, family, or socioeconomic challenges to pursue higher education.",
+      "application_requirements": [
+        "Personal narrative essay (1000 words)",
+        "Letter from counselor or mentor",
+        "Financial need documentation"
+      ],
+      "renewable": false,
+      "renewable_conditions": null,
+      "url": "https://example.org/overcoming-adversity",
+      "tags": ["need-based", "personal-story", "adversity"]
+    },
+    {
+      "id": "sch_006",
+      "name": "Hispanic Heritage Scholarship",
+      "provider": "Latino Education Alliance",
+      "amount": 4000,
+      "amount_type": "fixed",
+      "deadline": "2025-04-15",
+      "eligibility": {
+        "gpa_minimum": 2.75,
+        "ethnicity": ["Hispanic", "Latino"],
+        "citizenship": ["US Citizen", "Permanent Resident", "DACA"],
+        "enrollment_status": ["high_school_senior", "undergraduate"],
+        "financial_need": false
+      },
+      "fields_of_study": [],
+      "description": "Celebrating and supporting Hispanic and Latino students pursuing undergraduate education at accredited institutions.",
+      "application_requirements": [
+        "Essay on cultural heritage and goals",
+        "Official transcript",
+        "One letter of recommendation",
+        "Proof of enrollment"
+      ],
+      "renewable": true,
+      "renewable_conditions": "Maintain 2.75 GPA",
+      "url": "https://example.org/hispanic-heritage",
+      "tags": ["hispanic", "latino", "cultural", "undergraduate"]
+    },
+    {
+      "id": "sch_007",
+      "name": "Healthcare Heroes Scholarship",
+      "provider": "MedCare Foundation",
+      "amount": 15000,
+      "amount_type": "fixed",
+      "deadline": "2025-06-01",
+      "eligibility": {
+        "gpa_minimum": 3.5,
+        "citizenship": ["US Citizen", "Permanent Resident"],
+        "enrollment_status": ["undergraduate", "graduate"],
+        "financial_need": false
+      },
+      "fields_of_study": ["Nursing", "Medicine", "Public Health", "Healthcare Administration", "Pharmacy"],
+      "description": "For outstanding students pursuing careers in healthcare with a commitment to serving underserved populations.",
+      "application_requirements": [
+        "Personal statement on healthcare career goals",
+        "Three letters of recommendation",
+        "Official transcripts",
+        "Resume with healthcare experience"
+      ],
+      "renewable": true,
+      "renewable_conditions": "Maintain 3.3 GPA and healthcare major",
+      "url": "https://example.org/healthcare-heroes",
+      "tags": ["healthcare", "medical", "nursing", "merit-based"]
+    },
+    {
+      "id": "sch_008",
+      "name": "Rural Students Success Fund",
+      "provider": "Heartland Education Trust",
+      "amount": 3500,
+      "amount_type": "fixed",
+      "deadline": "2025-03-01",
+      "eligibility": {
+        "gpa_minimum": 2.5,
+        "citizenship": ["US Citizen", "Permanent Resident"],
+        "enrollment_status": ["high_school_senior"],
+        "financial_need": true,
+        "residency": "rural"
+      },
+      "fields_of_study": [],
+      "description": "Supporting students from rural communities who are the first in their immediate area to attend a four-year university.",
+      "application_requirements": [
+        "Essay on rural background and aspirations",
+        "School counselor verification of rural residency",
+        "Official transcript",
+        "FAFSA"
+      ],
+      "renewable": false,
+      "renewable_conditions": null,
+      "url": "https://example.org/rural-success",
+      "tags": ["rural", "first-generation", "need-based"]
+    },
+    {
+      "id": "sch_009",
+      "name": "Creative Arts Excellence Award",
+      "provider": "National Arts Council",
+      "amount": 6000,
+      "amount_type": "fixed",
+      "deadline": "2025-04-30",
+      "eligibility": {
+        "gpa_minimum": 2.5,
+        "citizenship": ["US Citizen", "Permanent Resident", "International"],
+        "enrollment_status": ["high_school_senior", "undergraduate"],
+        "financial_need": false
+      },
+      "fields_of_study": ["Fine Arts", "Graphic Design", "Music", "Theater", "Film", "Creative Writing"],
+      "description": "Recognizing exceptional talent and dedication in the creative arts. Portfolio or audition required.",
+      "application_requirements": [
+        "Portfolio or audition recording",
+        "Artist statement (300 words)",
+        "Faculty recommendation from arts instructor",
+        "Transcript"
+      ],
+      "renewable": true,
+      "renewable_conditions": "Maintain arts major and submit annual portfolio",
+      "url": "https://example.org/creative-arts",
+      "tags": ["arts", "creative", "portfolio-based", "merit"]
+    },
+    {
+      "id": "sch_010",
+      "name": "Veterans Family Scholarship",
+      "provider": "Honor Our Heroes Foundation",
+      "amount": 5000,
+      "amount_type": "fixed",
+      "deadline": "2025-05-15",
+      "eligibility": {
+        "gpa_minimum": 2.0,
+        "citizenship": ["US Citizen"],
+        "enrollment_status": ["high_school_senior", "undergraduate"],
+        "financial_need": false,
+        "military_affiliation": ["veteran", "active_duty", "dependent"]
+      },
+      "fields_of_study": [],
+      "description": "Supporting children and spouses of active duty military, veterans, or fallen service members.",
+      "application_requirements": [
+        "Proof of military affiliation",
+        "Personal essay",
+        "Official transcript",
+        "One letter of recommendation"
+      ],
+      "renewable": true,
+      "renewable_conditions": "Maintain 2.5 GPA",
+      "url": "https://example.org/veterans-family",
+      "tags": ["military", "veterans", "family"]
+    },
+    {
+      "id": "sch_011",
+      "name": "Environmental Stewardship Grant",
+      "provider": "Green Future Initiative",
+      "amount": 8000,
+      "amount_type": "fixed",
+      "deadline": "2025-02-15",
+      "eligibility": {
+        "gpa_minimum": 3.0,
+        "citizenship": ["US Citizen", "Permanent Resident", "DACA", "International"],
+        "enrollment_status": ["undergraduate", "graduate"],
+        "financial_need": false
+      },
+      "fields_of_study": ["Environmental Science", "Sustainability", "Climate Science", "Conservation Biology", "Renewable Energy"],
+      "description": "For students dedicated to environmental protection and sustainable development. Preference given to those with demonstrated environmental activism.",
+      "application_requirements": [
+        "Research proposal or project description",
+        "Documentation of environmental involvement",
+        "Two academic references",
+        "Transcript"
+      ],
+      "renewable": true,
+      "renewable_conditions": "Maintain 3.0 GPA and environmental focus",
+      "url": "https://example.org/environmental-stewardship",
+      "tags": ["environmental", "sustainability", "STEM", "activism"]
+    },
+    {
+      "id": "sch_012",
+      "name": "Entrepreneurship Innovation Award",
+      "provider": "StartUp America Foundation",
+      "amount": 10000,
+      "amount_type": "variable",
+      "deadline": "2025-07-01",
+      "eligibility": {
+        "gpa_minimum": 2.75,
+        "citizenship": ["US Citizen", "Permanent Resident"],
+        "enrollment_status": ["undergraduate", "graduate"],
+        "financial_need": false
+      },
+      "fields_of_study": ["Business", "Entrepreneurship", "Computer Science", "Engineering"],
+      "description": "Supporting student entrepreneurs with innovative business ideas. Must have an active startup or detailed business plan.",
+      "application_requirements": [
+        "Business plan or pitch deck",
+        "Video pitch (3 minutes)",
+        "Proof of business activity or prototype",
+        "Faculty or mentor recommendation"
+      ],
+      "renewable": false,
+      "renewable_conditions": null,
+      "url": "https://example.org/entrepreneurship-innovation",
+      "tags": ["entrepreneurship", "business", "innovation", "startup"]
+    }
+  ],
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2025-01-05",
+    "total_count": 12,
+    "notes": "Sample scholarship data for TuitionPlanner development and testing"
+  }
+}
