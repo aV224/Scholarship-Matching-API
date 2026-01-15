@@ -25,7 +25,7 @@ model Student {
   // id is the unique identifier for each Student, and it will be auto-generated.
   // @id marks this field as the primary key, @default sets a default value for the field when a new record is created 
   id                      String   @id
-  email                   String   @unique    // @unique ensures the field is unique across all records - no duplicates
+  email                   String       // @unique ensures the field is unique across all records - no duplicates
   name                    String
   gpa                     Float
   enrollment_status       String
